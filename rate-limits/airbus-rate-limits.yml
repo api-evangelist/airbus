@@ -1,0 +1,39 @@
+specification: API Commons Rate Limits
+specificationVersion: '0.1'
+schema: https://raw.githubusercontent.com/api-evangelist/interface-research/main/schema/api-commons.yml#/$defs/RateLimits
+provider: Airbus
+providerId: airbus
+created: '2026-05-16'
+modified: '2026-05-16'
+reconciled: false
+tags:
+  - Aerospace
+  - Earth Observation
+  - Rate Limiting
+description: OneAtlas APIs enforce per-token rate limits at the API gateway and quota limits at the product level (AOI square-kilometre or order count). Exact numeric ceilings are not published on the public portal landing page and depend on the underlying subscription or pay-per-order contract.
+notes: Per-second / per-minute gateway limits are not publicly advertised; product quotas (sqkm / orders) are set by contract. Confirm during onboarding.
+sources:
+  - https://api.oneatlas.airbus.com/
+responseCodes:
+  throttled: 429
+limits:
+  - name: OneAtlas API gateway throttling
+    scope: client
+    metric: requests_per_second
+    limit: not publicly published
+  - name: Living Library AOI quota
+    scope: account
+    metric: sqkm_per_subscription_period
+    limit: contract-defined
+  - name: Pay-per-order quota
+    scope: account
+    metric: orders_per_period
+    limit: contract-defined
+policies:
+  - name: Token-bucket throttling
+    description: API requests are throttled per OAuth 2.0 access token at the API gateway; sustained throughput is set during onboarding.
+  - name: Product-level quota
+    description: Each OneAtlas product (Living Library, Pay-Per-Order Archives, Pay-Per-Order Tasking, Basemap, Radar & Elevation) carries its own AOI / order quota set by the subscription or contract.
+maintainers:
+  - FN: Kin Lane
+    email: kin@apievangelist.com

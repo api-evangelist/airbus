@@ -1,0 +1,106 @@
+specification: API Commons Plans
+specificationVersion: '0.1'
+schema: https://raw.githubusercontent.com/api-evangelist/interface-research/main/schema/api-commons.yml#/$defs/Plans
+provider: Airbus
+providerId: airbus
+created: '2026-05-16'
+modified: '2026-05-16'
+reconciled: false
+tags:
+  - Aerospace
+  - Earth Observation
+  - Satellite Imagery
+description: Airbus offers the OneAtlas API portfolio with a free evaluation tier, subscription-style Living Library access, and pay-per-order archive and tasking products. Per-square-kilometre pricing is gated behind a sales conversation; the public portal lists the products and packaging but not unit prices.
+notes: Numeric pricing is gated behind sales. Reconcile by contacting an Airbus / OneAtlas Account Manager or by signing in to the account portal.
+sources:
+  - https://api.oneatlas.airbus.com/
+  - https://space-solutions.airbus.com/imagery/how-to-order-imagery-and-data/
+plans:
+  - id: airbus-oneatlas-free
+    name: OneAtlas Free Evaluation
+    type: free
+    description: Free evaluation access to a sample subset of the OneAtlas catalogue with limited AOI download capability for evaluation.
+    entries:
+      - label: Free evaluation
+        name: free_evaluation
+        type: free
+        metric: monthly_credits
+        limit: -1
+        timeFrame: month
+        geo: global
+        unit: 1
+        price: '0'
+        userMultiplied: false
+    elements:
+      - name: Limited Living Library access
+      - name: Sample tiles and basemap
+      - name: Evaluation use only
+  - id: airbus-oneatlas-living-library
+    name: OneAtlas Living Library Subscription
+    type: subscription
+    description: Annual subscription giving streaming access to the Living Library archive for AOI search, preview, and analytics.
+    entries:
+      - label: Living Library subscription
+        name: living_library
+        type: subscription
+        metric: aoi_sqkm
+        limit: -1
+        timeFrame: year
+        geo: global
+        unit: 1
+        price: contact OneAtlas Account Manager
+        userMultiplied: false
+    elements:
+      - name: Living Library optical imagery
+      - name: Streaming preview and download
+      - name: Annual contract
+  - id: airbus-oneatlas-pay-per-order
+    name: OneAtlas Pay-Per-Order (Archives & Tasking)
+    type: pay-per-use
+    description: Pay-per-order purchase of archive imagery and tasking acquisitions, priced per square kilometre and per acquisition priority.
+    entries:
+      - label: Archive imagery
+        name: archive_order
+        type: pay_per_use
+        metric: sqkm
+        limit: -1
+        timeFrame: month
+        geo: global
+        unit: 1
+        price: contact OneAtlas Account Manager
+        userMultiplied: false
+      - label: Tasking acquisition
+        name: tasking_order
+        type: pay_per_use
+        metric: acquisition
+        limit: -1
+        timeFrame: month
+        geo: global
+        unit: 1
+        price: contact OneAtlas Account Manager
+        userMultiplied: false
+    elements:
+      - name: Archive imagery (Pléiades / Pléiades Neo / SPOT)
+      - name: Tasking acquisitions with priority options
+      - name: SAR archive and tasking via Radar & Elevation API
+  - id: airbus-oneatlas-enterprise
+    name: OneAtlas Enterprise / Defense
+    type: enterprise
+    description: Custom enterprise / defense agreement bundling Living Library, tasking, SAR, and elevation products under negotiated terms.
+    entries:
+      - label: Enterprise contract
+        name: enterprise_contract
+        type: subscription
+        metric: contract
+        limit: -1
+        timeFrame: year
+        geo: global
+        unit: 1
+        price: contact Airbus Defense and Space
+        userMultiplied: false
+    elements:
+      - name: Bundled optical + SAR + elevation
+      - name: Subject to export-control review
+maintainers:
+  - FN: Kin Lane
+    email: kin@apievangelist.com

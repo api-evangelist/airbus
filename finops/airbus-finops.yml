@@ -1,0 +1,80 @@
+specification: FinOps Framework
+specificationVersion: '1.0'
+schema: https://www.finops.org/framework/
+provider: Airbus
+providerId: airbus
+created: '2026-05-16'
+modified: '2026-05-16'
+reconciled: false
+tags:
+  - Aerospace
+  - Earth Observation
+  - FinOps
+  - FOCUS
+description: Airbus OneAtlas combines fixed-fee subscriptions (Living Library) with consumption-based pay-per-order pricing on archive and tasking imagery, and enterprise / defense contracts. The metered units are area (square kilometres) for archive / Living Library and acquisitions for tasking. Public pricing is gated, so the FinOps mapping is structural.
+notes: Unit prices are gated behind sales; FinOps mapping documents the billing surface but cannot be reconciled to a public rate card.
+sources:
+  - https://api.oneatlas.airbus.com/
+alignedWith:
+  framework: FinOps Foundation Framework
+  frameworkUrl: https://www.finops.org/framework/
+  dataSpec: FOCUS
+  dataSpecVersion: '1.3'
+  dataSpecUrl: https://focus.finops.org/focus-specification/v1-3/
+publisherName: Airbus Defence and Space SAS
+serviceCategory: Earth Observation / Satellite Imagery
+billingModel:
+  pricingCategory: Hybrid
+  billingFrequency: Per-Invoice
+  billingCurrency: EUR
+  chargeCategories:
+    - Purchase
+    - Usage
+focusColumns:
+  ServiceName: Airbus OneAtlas
+  ServiceCategory: Earth Observation / Satellite Imagery
+  ProviderName: Airbus
+  PublisherName: Airbus Defence and Space SAS
+  InvoiceIssuerName: Airbus Defence and Space SAS
+  BillingCurrency: EUR
+meters:
+  - name: living_library_sqkm
+    description: Square kilometres of AOI streamed or downloaded from the Living Library under subscription.
+    unit: sqkm
+    aggregation: sum
+    dimensions:
+      - product
+      - constellation
+  - name: archive_order_sqkm
+    description: Square kilometres of imagery purchased on a pay-per-order basis from the archive.
+    unit: sqkm
+    aggregation: sum
+    dimensions:
+      - product
+      - constellation
+      - acquisition_date
+  - name: tasking_acquisition
+    description: Tasking acquisitions ordered on a pay-per-order basis, priced per acquisition and per priority tier.
+    unit: acquisition
+    aggregation: sum
+    dimensions:
+      - constellation
+      - priority
+  - name: basemap_tiles
+    description: Tile / API calls against the OneAtlas Basemap service under the relevant plan.
+    unit: tile
+    aggregation: sum
+    dimensions:
+      - region
+principles:
+  - name: Visibility
+    description: Track OneAtlas spend by product (Living Library / Pay-Per-Order Archives / Tasking / Basemap / Radar & Elevation) and by AOI.
+  - name: Allocation
+    description: Allocate OneAtlas cost to the analyst team / project consuming the AOI; tag orders with project codes during ordering.
+  - name: Optimization
+    description: Optimize by preferring Living Library streaming for repeat AOIs, batching archive orders, and aligning tasking priority with operational SLAs.
+  - name: Accountability
+    description: GIS / geospatial leadership owns the OneAtlas subscription; project owners are accountable for pay-per-order spend within their AOI envelope.
+maintainers:
+  - FN: Kin Lane
+    email: kin@apievangelist.com

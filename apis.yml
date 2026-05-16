@@ -8,11 +8,137 @@ tags:
   - Defense
   - Manufacturing
   - Aviation
-description: 'A European multinational aerospace corporation designing, manufacturing, and selling commercial aircraft, helicopters, defense, and space products. One of the world''s largest aerospace companies with operations across civil and military aviation.'
+  - Earth Observation
+  - Satellite Imagery
+description: 'A European multinational aerospace corporation designing, manufacturing, and selling commercial aircraft, helicopters, defense, and space products. Through its Space Solutions / OneAtlas division Airbus publishes a developer API portal for satellite imagery, mapping, and elevation data.'
 created: '2026-05-05'
-modified: '2026-05-05'
+modified: '2026-05-16'
 specificationVersion: '0.19'
-apis: []
+apis:
+  - aid: airbus:oneatlas-living-library
+    name: OneAtlas Living Library API
+    tags:
+      - Earth Observation
+      - Satellite Imagery
+      - Living Library
+    image: https://kinlane-productions.s3.amazonaws.com/apis-json/apis-json-logo.jpg
+    humanURL: https://api.oneatlas.airbus.com/
+    properties:
+      - url: https://api.oneatlas.airbus.com/
+        type: Portal
+      - url: https://account.foundation.oneatlas.airbus.com/
+        type: AccountManagement
+    description: 'Subscription-based catalogue access to Airbus Living Library Pléiades, Pléiades Neo, and SPOT optical imagery for AOI search, preview, and streaming.'
+  - aid: airbus:oneatlas-pay-per-order-archives
+    name: OneAtlas Pay-Per-Order Archives API
+    tags:
+      - Earth Observation
+      - Satellite Imagery
+      - Archives
+    image: https://kinlane-productions.s3.amazonaws.com/apis-json/apis-json-logo.jpg
+    humanURL: https://api.oneatlas.airbus.com/
+    properties:
+      - url: https://api.oneatlas.airbus.com/
+        type: Portal
+    description: 'On-demand purchase of historical archive imagery from Airbus optical and radar constellations on a pay-per-order basis.'
+  - aid: airbus:oneatlas-pay-per-order-tasking
+    name: OneAtlas Pay-Per-Order Tasking API
+    tags:
+      - Earth Observation
+      - Satellite Imagery
+      - Tasking
+    image: https://kinlane-productions.s3.amazonaws.com/apis-json/apis-json-logo.jpg
+    humanURL: https://api.oneatlas.airbus.com/
+    properties:
+      - url: https://api.oneatlas.airbus.com/
+        type: Portal
+    description: 'On-demand satellite tasking for new imagery acquisitions over a user-defined area of interest, with priority and acquisition-window options.'
+  - aid: airbus:oneatlas-basemap
+    name: OneAtlas Basemap API
+    tags:
+      - Mapping
+      - Basemap
+      - Earth Observation
+    image: https://kinlane-productions.s3.amazonaws.com/apis-json/apis-json-logo.jpg
+    humanURL: https://api.oneatlas.airbus.com/
+    properties:
+      - url: https://api.oneatlas.airbus.com/
+        type: Portal
+    description: 'Global high-resolution basemap tile service derived from Airbus optical imagery, suitable for embedding in GIS and web mapping applications.'
+  - aid: airbus:oneatlas-radar-elevation
+    name: OneAtlas Radar & Elevation API
+    tags:
+      - Radar
+      - SAR
+      - Elevation
+      - DEM
+    image: https://kinlane-productions.s3.amazonaws.com/apis-json/apis-json-logo.jpg
+    humanURL: https://api.oneatlas.airbus.com/
+    properties:
+      - url: https://api.oneatlas.airbus.com/
+        type: Portal
+    description: 'Access to Airbus radar (SAR) imagery and elevation products including WorldDEM, suitable for change detection, surveillance, and terrain analysis.'
 common:
   - type: Website
     url: https://www.airbus.com/
+  - type: Portal
+    url: https://api.oneatlas.airbus.com/
+  - type: AccountManagement
+    url: https://account.foundation.oneatlas.airbus.com/
+  - type: StatusPage
+    url: https://status.oneatlas.airbus.com/
+  - type: Features
+    data:
+      - name: Optical Imagery
+        description: Access to Pléiades, Pléiades Neo, and SPOT optical imagery via the Living Library catalogue and archive ordering.
+      - name: Radar Imagery
+        description: SAR imagery from the TerraSAR-X / TanDEM-X constellation and from the new Radar Constellation.
+      - name: Satellite Tasking
+        description: Pay-per-order tasking for new imagery acquisitions over a user-defined AOI.
+      - name: Elevation Products
+        description: Global elevation models including WorldDEM derived from Airbus radar interferometry.
+      - name: Basemap Tile Service
+        description: High-resolution global basemap tile service for embedding in GIS and web maps.
+      - name: API Key + OAuth 2.0
+        description: Authentication via per-user API key issued by the OneAtlas account portal with OAuth 2.0 access-token exchange.
+  - type: UseCases
+    data:
+      - name: Land-Use / Land-Cover Monitoring
+        description: Periodic optical imagery used to monitor land-use change, deforestation, agriculture, and urban expansion.
+      - name: Defense & Intelligence
+        description: Tasking and archive ordering of high-resolution optical and SAR imagery for defense and intelligence customers.
+      - name: Infrastructure Monitoring
+        description: Repeat radar acquisitions for monitoring pipelines, dams, mines, and other linear infrastructure.
+      - name: GIS Basemaps
+        description: Embedding the OneAtlas basemap into GIS workflows and web-mapping products.
+      - name: Disaster Response
+        description: Rapid tasking and archive ordering after natural disasters to support response and recovery.
+  - type: Authentication
+    data:
+      - name: API Key
+        description: Per-user API key issued via the OneAtlas account portal.
+      - name: OAuth 2.0
+        description: OAuth 2.0 token exchange (token endpoint at authenticate.foundation.api.oneatlas.airbus.com) using the API key.
+      - name: Account Onboarding
+        description: Production access requires an active commercial agreement and account on account.foundation.oneatlas.airbus.com.
+  - type: Compliance
+    data:
+      - name: GDPR
+        description: General Data Protection Regulation compliance for European customers.
+      - name: Export Control
+        description: High-resolution imagery and radar products are subject to French / EU dual-use export controls (Regulation EU 2021/821) and U.S. EAR re-export rules where applicable.
+      - name: ITAR / Dual-Use
+        description: Airbus Defense and Space products are governed by national defense-export regimes including ITAR equivalents and EU dual-use regulation.
+  - type: Integrations
+    data:
+      - name: ArcGIS
+        description: Esri ArcGIS integrations for streaming Airbus basemaps and imagery into the ArcGIS platform.
+      - name: QGIS
+        description: QGIS plugins for connecting to Airbus tile and WMS / WMTS services.
+      - name: AWS
+        description: Airbus distributes selected imagery products through AWS Marketplace and Earth on AWS.
+      - name: Skywise
+        description: Aviation-data platform powered by Airbus and Palantir, exposed to airline operators via separate enterprise integration.
+maintainers:
+  - FN: Kin Lane
+    email: kin@apievangelist.com
