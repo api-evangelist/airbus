@@ -79,6 +79,10 @@ apis:
         type: Portal
     description: 'Access to Airbus radar (SAR) imagery and elevation products including WorldDEM, suitable for change detection, surveillance, and terrain analysis.'
 common:
+  - type: GitHubOrganization
+    url: https://github.com/airbus
+  - type: LinkedIn
+    url: https://www.linkedin.com/company/airbusgroup
   - type: Website
     url: https://www.airbus.com/
   - type: Portal
