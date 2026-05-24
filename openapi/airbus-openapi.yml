@@ -1,0 +1,91 @@
+openapi: 3.1.0
+info:
+  title: Airbus OneAtlas API (Authentication)
+  version: "1.0"
+  description: |
+    Best-effort OpenAPI 3.1 representation of the Airbus OneAtlas developer
+    portal authentication and core catalog touch points, derived from
+    https://api.oneatlas.airbus.com/. OneAtlas exposes multiple product APIs
+    (OAD Living Library, Pay Per Order Archives, Pay Per Order Tasking, Basemap,
+    Radar & Elevation) which share a Keycloak-based access token flow. Only
+    the authentication endpoint and high-level catalog grouping are documented
+    here because the underlying product endpoint paths are not enumerated in
+    public introductory material.
+  contact:
+    name: Airbus OneAtlas
+    url: https://api.oneatlas.airbus.com/
+servers:
+  - url: https://authenticate.foundation.api.oneatlas.airbus.com
+    description: OneAtlas Keycloak authentication
+  - url: https://search.foundation.api.oneatlas.airbus.com
+    description: OneAtlas catalog search service
+  - url: https://data.api.oneatlas.airbus.com
+    description: OneAtlas data API service
+tags:
+  - name: Authentication
+  - name: Catalog
+paths:
+  /auth/realms/IDP/protocol/openid-connect/token:
+    post:
+      tags: [Authentication]
+      summary: Exchange API key for bearer access token
+      description: |
+        POST your OneAtlas API key to obtain a short-lived bearer access token
+        (1 hour) used by all downstream OneAtlas product APIs.
+      operationId: getAccessToken
+      requestBody:
+        required: true
+        content:
+          application/x-www-form-urlencoded:
+            schema:
+              type: object
+              required: [apikey, client_id, grant_type]
+              properties:
+                apikey:
+                  type: string
+                  description: Your OneAtlas API key.
+                client_id:
+                  type: string
+                  description: Service group identifier - use "IDP" for OneAtlas data services or "AAA" for API key management.
+                grant_type:
+                  type: string
+                  enum: [api_key]
+      responses:
+        '200':
+          description: Access token issued
+          content:
+            application/json:
+              schema:
+                type: object
+                properties:
+                  access_token: { type: string }
+                  expires_in: { type: integer, example: 3600 }
+                  token_type: { type: string, example: bearer }
+  /api/v1/opensearch:
+    get:
+      tags: [Catalog]
+      summary: Catalog OpenSearch (Living Library and archives)
+      description: |
+        Search OneAtlas satellite imagery catalog using OpenSearch parameters
+        such as `bbox`, `startDate`, `endDate`, `productType`, `cloudCover` and
+        `constellation`. Requires bearer token authentication.
+      operationId: openSearchCatalog
+      parameters:
+        - { name: bbox, in: query, schema: { type: string } }
+        - { name: startDate, in: query, schema: { type: string, format: date-time } }
+        - { name: endDate, in: query, schema: { type: string, format: date-time } }
+        - { name: productType, in: query, schema: { type: string } }
+        - { name: cloudCover, in: query, schema: { type: string } }
+        - { name: constellation, in: query, schema: { type: string } }
+      responses:
+        '200': { description: OK }
+components:
+  securitySchemes:
+    BearerAuth:
+      type: http
+      scheme: bearer
+      description: |
+        Bearer access token obtained via POST
+        /auth/realms/IDP/protocol/openid-connect/token with grant_type=api_key.
+security:
+  - BearerAuth: []
