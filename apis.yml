@@ -2,7 +2,7 @@ aid: airbus
 url: https://raw.githubusercontent.com/api-evangelist/airbus/refs/heads/main/apis.yml
 name: Airbus
 type: Index
-image: https://kinlane-productions.s3.amazonaws.com/apis-json/apis-json-logo.jpg
+image: https://kinlane-images.s3.amazonaws.com/shared/apis-json/apis-json-logo.jpg
 tags:
   - Aerospace
   - Defense
@@ -21,7 +21,7 @@ apis:
       - Earth Observation
       - Satellite Imagery
       - Living Library
-    image: https://kinlane-productions.s3.amazonaws.com/apis-json/apis-json-logo.jpg
+    image: https://kinlane-images.s3.amazonaws.com/shared/apis-json/apis-json-logo.jpg
     humanURL: https://api.oneatlas.airbus.com/
     properties:
       - url: https://api.oneatlas.airbus.com/
@@ -35,7 +35,7 @@ apis:
       - Earth Observation
       - Satellite Imagery
       - Archives
-    image: https://kinlane-productions.s3.amazonaws.com/apis-json/apis-json-logo.jpg
+    image: https://kinlane-images.s3.amazonaws.com/shared/apis-json/apis-json-logo.jpg
     humanURL: https://api.oneatlas.airbus.com/
     properties:
       - url: https://api.oneatlas.airbus.com/
@@ -47,7 +47,7 @@ apis:
       - Earth Observation
       - Satellite Imagery
       - Tasking
-    image: https://kinlane-productions.s3.amazonaws.com/apis-json/apis-json-logo.jpg
+    image: https://kinlane-images.s3.amazonaws.com/shared/apis-json/apis-json-logo.jpg
     humanURL: https://api.oneatlas.airbus.com/
     properties:
       - url: https://api.oneatlas.airbus.com/
@@ -59,7 +59,7 @@ apis:
       - Mapping
       - Basemap
       - Earth Observation
-    image: https://kinlane-productions.s3.amazonaws.com/apis-json/apis-json-logo.jpg
+    image: https://kinlane-images.s3.amazonaws.com/shared/apis-json/apis-json-logo.jpg
     humanURL: https://api.oneatlas.airbus.com/
     properties:
       - url: https://api.oneatlas.airbus.com/
@@ -72,7 +72,7 @@ apis:
       - SAR
       - Elevation
       - DEM
-    image: https://kinlane-productions.s3.amazonaws.com/apis-json/apis-json-logo.jpg
+    image: https://kinlane-images.s3.amazonaws.com/shared/apis-json/apis-json-logo.jpg
     humanURL: https://api.oneatlas.airbus.com/
     properties:
       - url: https://api.oneatlas.airbus.com/
