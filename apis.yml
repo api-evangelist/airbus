@@ -79,6 +79,8 @@ apis:
         type: Portal
     description: 'Access to Airbus radar (SAR) imagery and elevation products including WorldDEM, suitable for change detection, surveillance, and terrain analysis.'
 common:
+  - type: AgenticAccess
+    url: agentic-access/airbus-agentic-access.yml
   - type: VulnerabilityDisclosure
     url: security/airbus-vulnerability-disclosure.yml
   - type: DomainSecurity
