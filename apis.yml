@@ -2,7 +2,20 @@ aid: airbus
 url: https://raw.githubusercontent.com/api-evangelist/airbus/refs/heads/main/apis.yml
 name: Airbus
 type: Index
-image: https://kinlane-images.s3.amazonaws.com/shared/apis-json/apis-json-logo.jpg
+accessModel:
+  pricing: freemium
+  onboarding: self-serve
+  trial: false
+  try_now: true
+  public: false
+  label: Freemium · Self-serve signup
+  confidence: high
+  source:
+  - plans
+  - authentication
+  generated: '2026-07-22'
+  method: derived
+image: https://kinlane-images.s3.amazonaws.com/shared/apis-json/icons/airbus.png
 tags:
   - Aerospace
   - Defense
@@ -15,69 +28,97 @@ created: '2026-05-05'
 modified: '2026-05-16'
 specificationVersion: '0.19'
 apis:
-  - aid: airbus:oneatlas-living-library
-    name: OneAtlas Living Library API
-    tags:
-      - Earth Observation
-      - Satellite Imagery
-      - Living Library
-    image: https://kinlane-images.s3.amazonaws.com/shared/apis-json/apis-json-logo.jpg
-    humanURL: https://api.oneatlas.airbus.com/
-    properties:
-      - url: https://api.oneatlas.airbus.com/
-        type: Portal
-      - url: https://account.foundation.oneatlas.airbus.com/
-        type: AccountManagement
-    description: 'Subscription-based catalogue access to Airbus Living Library Pléiades, Pléiades Neo, and SPOT optical imagery for AOI search, preview, and streaming.'
-  - aid: airbus:oneatlas-pay-per-order-archives
-    name: OneAtlas Pay-Per-Order Archives API
-    tags:
-      - Earth Observation
-      - Satellite Imagery
-      - Archives
-    image: https://kinlane-images.s3.amazonaws.com/shared/apis-json/apis-json-logo.jpg
-    humanURL: https://api.oneatlas.airbus.com/
-    properties:
-      - url: https://api.oneatlas.airbus.com/
-        type: Portal
-    description: 'On-demand purchase of historical archive imagery from Airbus optical and radar constellations on a pay-per-order basis.'
-  - aid: airbus:oneatlas-pay-per-order-tasking
-    name: OneAtlas Pay-Per-Order Tasking API
-    tags:
-      - Earth Observation
-      - Satellite Imagery
-      - Tasking
-    image: https://kinlane-images.s3.amazonaws.com/shared/apis-json/apis-json-logo.jpg
-    humanURL: https://api.oneatlas.airbus.com/
-    properties:
-      - url: https://api.oneatlas.airbus.com/
-        type: Portal
-    description: 'On-demand satellite tasking for new imagery acquisitions over a user-defined area of interest, with priority and acquisition-window options.'
-  - aid: airbus:oneatlas-basemap
-    name: OneAtlas Basemap API
-    tags:
-      - Mapping
-      - Basemap
-      - Earth Observation
-    image: https://kinlane-images.s3.amazonaws.com/shared/apis-json/apis-json-logo.jpg
-    humanURL: https://api.oneatlas.airbus.com/
-    properties:
-      - url: https://api.oneatlas.airbus.com/
-        type: Portal
-    description: 'Global high-resolution basemap tile service derived from Airbus optical imagery, suitable for embedding in GIS and web mapping applications.'
-  - aid: airbus:oneatlas-radar-elevation
-    name: OneAtlas Radar & Elevation API
-    tags:
-      - Radar
-      - SAR
-      - Elevation
-      - DEM
-    image: https://kinlane-images.s3.amazonaws.com/shared/apis-json/apis-json-logo.jpg
-    humanURL: https://api.oneatlas.airbus.com/
-    properties:
-      - url: https://api.oneatlas.airbus.com/
-        type: Portal
-    description: 'Access to Airbus radar (SAR) imagery and elevation products including WorldDEM, suitable for change detection, surveillance, and terrain analysis.'
+- aid: airbus:oneatlas-living-library
+  name: OneAtlas Living Library API
+  tags:
+  - Earth Observation
+  - Satellite Imagery
+  - Living Library
+  image: https://kinlane-images.s3.amazonaws.com/shared/apis-json/apis-json-logo.jpg
+  humanURL: https://api.oneatlas.airbus.com/
+  properties:
+  - url: https://api.oneatlas.airbus.com/
+    type: Portal
+  - url: https://account.foundation.oneatlas.airbus.com/
+    type: AccountManagement
+  description: >-
+    Subscription-based catalogue access to Airbus Living Library Pléiades, Pléiades Neo, and SPOT optical
+    imagery for AOI search, preview, and streaming.
+- aid: airbus:oneatlas-pay-per-order-archives
+  name: OneAtlas Pay-Per-Order Archives API
+  tags:
+  - Earth Observation
+  - Satellite Imagery
+  - Archives
+  image: https://kinlane-images.s3.amazonaws.com/shared/apis-json/apis-json-logo.jpg
+  humanURL: https://api.oneatlas.airbus.com/
+  properties:
+  - url: https://api.oneatlas.airbus.com/
+    type: Portal
+  description: >-
+    On-demand purchase of historical archive imagery from Airbus optical and radar constellations on a
+    pay-per-order basis.
+- aid: airbus:oneatlas-pay-per-order-tasking
+  name: OneAtlas Pay-Per-Order Tasking API
+  tags:
+  - Earth Observation
+  - Satellite Imagery
+  - Tasking
+  image: https://kinlane-images.s3.amazonaws.com/shared/apis-json/apis-json-logo.jpg
+  humanURL: https://api.oneatlas.airbus.com/
+  properties:
+  - url: https://api.oneatlas.airbus.com/
+    type: Portal
+  description: >-
+    On-demand satellite tasking for new imagery acquisitions over a user-defined area of interest, with
+    priority and acquisition-window options.
+- aid: airbus:oneatlas-basemap
+  name: OneAtlas Basemap API
+  tags:
+  - Mapping
+  - Basemap
+  - Earth Observation
+  image: https://kinlane-images.s3.amazonaws.com/shared/apis-json/apis-json-logo.jpg
+  humanURL: https://api.oneatlas.airbus.com/
+  properties:
+  - url: https://api.oneatlas.airbus.com/
+    type: Portal
+  description: >-
+    Global high-resolution basemap tile service derived from Airbus optical imagery, suitable for embedding
+    in GIS and web mapping applications.
+- aid: airbus:oneatlas-radar-elevation
+  name: OneAtlas Radar & Elevation API
+  tags:
+  - Radar
+  - SAR
+  - Elevation
+  - DEM
+  image: https://kinlane-images.s3.amazonaws.com/shared/apis-json/apis-json-logo.jpg
+  humanURL: https://api.oneatlas.airbus.com/
+  properties:
+  - url: https://api.oneatlas.airbus.com/
+    type: Portal
+  description: >-
+    Access to Airbus radar (SAR) imagery and elevation products including WorldDEM, suitable for change
+    detection, surveillance, and terrain analysis.
+- aid: airbus:airbus-authentication-api
+  name: Airbus Authentication API
+  description: The Authentication API from Airbus — 1 operation(s) for authentication.
+  humanURL: https://api.oneatlas.airbus.com/
+  tags:
+  - Authentication
+  properties:
+  - type: OpenAPI
+    url: openapi/airbus-authentication-api-openapi.yml
+- aid: airbus:airbus-catalog-api
+  name: Airbus Catalog API
+  description: The Catalog API from Airbus — 1 operation(s) for catalog.
+  humanURL: https://api.oneatlas.airbus.com/
+  tags:
+  - Catalog
+  properties:
+  - type: OpenAPI
+    url: openapi/airbus-catalog-api-openapi.yml
 common:
   - type: AgenticAccess
     url: agentic-access/airbus-agentic-access.yml
