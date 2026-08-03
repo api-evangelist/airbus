@@ -1,0 +1,16 @@
+{
+  "provider": "airbus",
+  "sources": [
+    "airbus-authentication-api-openapi.yml",
+    "airbus-catalog-api-openapi.yml"
+  ],
+  "outputs": [
+    "airbus-authentication-api-openapi.yml",
+    "airbus-catalog-api-openapi.yml"
+  ],
+  "archived": [],
+  "errors": [],
+  "warnings": [],
+  "notes": [],
+  "skipped": []
+}
