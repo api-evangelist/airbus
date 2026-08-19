@@ -1,0 +1,169 @@
+{
+  "item": [
+    {
+      "id": "958ab944-ef6f-41e0-935e-dbe8955ee41f",
+      "name": "Catalog",
+      "description": {
+        "content": "",
+        "type": "text/plain"
+      },
+      "item": [
+        {
+          "id": "0e415936-7ae0-4381-b4f2-7da30106146b",
+          "name": "Catalog OpenSearch (Living Library and archives)",
+          "request": {
+            "name": "Catalog OpenSearch (Living Library and archives)",
+            "description": {
+              "content": "Search OneAtlas satellite imagery catalog using OpenSearch parameters\nsuch as `bbox`, `startDate`, `endDate`, `productType`, `cloudCover` and\n`constellation`. Requires bearer token authentication.\n",
+              "type": "text/plain"
+            },
+            "url": {
+              "path": [
+                "api",
+                "v1",
+                "opensearch"
+              ],
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "query": [
+                {
+                  "disabled": false,
+                  "key": "bbox",
+                  "value": "<string>"
+                },
+                {
+                  "disabled": false,
+                  "key": "startDate",
+                  "value": "<dateTime>"
+                },
+                {
+                  "disabled": false,
+                  "key": "endDate",
+                  "value": "<dateTime>"
+                },
+                {
+                  "disabled": false,
+                  "key": "productType",
+                  "value": "<string>"
+                },
+                {
+                  "disabled": false,
+                  "key": "cloudCover",
+                  "value": "<string>"
+                },
+                {
+                  "disabled": false,
+                  "key": "constellation",
+                  "value": "<string>"
+                }
+              ],
+              "variable": []
+            },
+            "method": "GET",
+            "auth": null
+          },
+          "response": [
+            {
+              "id": "a5866ee0-0dad-4ab1-a6c7-a972070fd147",
+              "name": "OK",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    "api",
+                    "v1",
+                    "opensearch"
+                  ],
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [
+                    {
+                      "key": "bbox",
+                      "value": "<string>"
+                    },
+                    {
+                      "key": "startDate",
+                      "value": "<dateTime>"
+                    },
+                    {
+                      "key": "endDate",
+                      "value": "<dateTime>"
+                    },
+                    {
+                      "key": "productType",
+                      "value": "<string>"
+                    },
+                    {
+                      "key": "cloudCover",
+                      "value": "<string>"
+                    },
+                    {
+                      "key": "constellation",
+                      "value": "<string>"
+                    }
+                  ],
+                  "variable": []
+                },
+                "header": [
+                  {
+                    "description": {
+                      "content": "Added as a part of security scheme: bearer",
+                      "type": "text/plain"
+                    },
+                    "key": "Authorization",
+                    "value": "Bearer <token>"
+                  }
+                ],
+                "method": "GET",
+                "body": {}
+              },
+              "status": "OK",
+              "code": 200,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "text/plain"
+                }
+              ],
+              "body": "",
+              "cookie": [],
+              "_postman_previewlanguage": "text"
+            }
+          ],
+          "event": [],
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          }
+        }
+      ],
+      "event": []
+    }
+  ],
+  "event": [],
+  "variable": [
+    {
+      "type": "string",
+      "value": "https://authenticate.foundation.api.oneatlas.airbus.com",
+      "key": "baseUrl"
+    }
+  ],
+  "auth": {
+    "type": "bearer",
+    "bearer": [
+      {
+        "key": "token",
+        "value": "{{bearerToken}}"
+      }
+    ]
+  },
+  "info": {
+    "_postman_id": "3ecb341b-de5a-489a-9c65-9c96d76d1c73",
+    "name": "Airbus OneAtlas API () Authentication Catalog API",
+    "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+    "description": {
+      "content": "Best-effort OpenAPI 3.1 representation of the Airbus OneAtlas developer\nportal authentication and core catalog touch points, derived from\nhttps://api.oneatlas.airbus.com/. OneAtlas exposes multiple product APIs\n(OAD Living Library, Pay Per Order Archives, Pay Per Order Tasking, Basemap,\nRadar & Elevation) which share a Keycloak-based access token flow. Only\nthe authentication endpoint and high-level catalog grouping are documented\nhere because the underlying product endpoint paths are not enumerated in\npublic introductory material.\n\n\nContact Support:\n Name: Airbus OneAtlas",
+      "type": "text/plain"
+    }
+  }
+}

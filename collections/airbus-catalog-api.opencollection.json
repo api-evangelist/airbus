@@ -1,0 +1,67 @@
+{
+  "opencollection": "1.0.0",
+  "info": {
+    "name": "Airbus OneAtlas API () Authentication Catalog API",
+    "version": "1.0"
+  },
+  "request": {
+    "auth": {
+      "type": "bearer",
+      "token": "{{bearerToken}}"
+    }
+  },
+  "items": [
+    {
+      "info": {
+        "name": "Catalog",
+        "type": "folder"
+      },
+      "items": [
+        {
+          "info": {
+            "name": "Catalog OpenSearch (Living Library and archives)",
+            "type": "http"
+          },
+          "http": {
+            "method": "GET",
+            "url": "https://authenticate.foundation.api.oneatlas.airbus.com/api/v1/opensearch",
+            "params": [
+              {
+                "name": "bbox",
+                "value": "",
+                "type": "query"
+              },
+              {
+                "name": "startDate",
+                "value": "",
+                "type": "query"
+              },
+              {
+                "name": "endDate",
+                "value": "",
+                "type": "query"
+              },
+              {
+                "name": "productType",
+                "value": "",
+                "type": "query"
+              },
+              {
+                "name": "cloudCover",
+                "value": "",
+                "type": "query"
+              },
+              {
+                "name": "constellation",
+                "value": "",
+                "type": "query"
+              }
+            ]
+          },
+          "docs": "Search OneAtlas satellite imagery catalog using OpenSearch parameters\nsuch as `bbox`, `startDate`, `endDate`, `productType`, `cloudCover` and\n`constellation`. Requires bearer token authentication.\n"
+        }
+      ]
+    }
+  ],
+  "bundled": true
+}
