@@ -38,7 +38,7 @@ tags:
   - Remote Sensing
 description: 'A European multinational aerospace corporation designing, manufacturing, and selling commercial aircraft, helicopters, defense, and space products. Through its Space Solutions / OneAtlas division Airbus publishes a developer API portal for satellite imagery, mapping, and elevation data.'
 created: '2026-05-05'
-modified: '2026-05-16'
+modified: '2026-10-06'
 specificationVersion: '0.23'
 apis:
 - aid: airbus:oneatlas-living-library
@@ -133,6 +133,8 @@ apis:
   - type: OpenAPI
     url: openapi/airbus-catalog-api-openapi.yml
 common:
+  - url: https://www.airbus.com/en/rss.xml
+    type: BlogRSS
   - type: AgenticAccess
     url: agentic-access/airbus-agentic-access.yml
   - type: VulnerabilityDisclosure
