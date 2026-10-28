@@ -1,4 +1,4 @@
-# Airbus (airbus)
+# Airbus
 
 <!-- API-EVANGELIST-PROVENANCE:BEGIN -->
 > ### About this repository
@@ -66,135 +66,123 @@
 
 A European multinational aerospace corporation designing, manufacturing, and selling commercial aircraft, helicopters, defense, and space products. Through its Space Solutions / OneAtlas division Airbus publishes a developer API portal for satellite imagery, mapping, and elevation data.
 
-**APIs.json:** [https://raw.githubusercontent.com/api-evangelist/airbus/refs/heads/main/apis.yml](https://raw.githubusercontent.com/api-evangelist/airbus/refs/heads/main/apis.yml)
+**Areas:** Aerospace · Defense · Manufacturing · Aviation · Earth Observation · Satellite Imagery · Remote Sensing
 
-## Scope
+## Airbus on APIs.io
 
-- **Type:** Index
+Everything profiled for Airbus is published on APIs.io rather than in this repository. Start at the provider page — **[apis.io/providers/airbus/](https://apis.io/providers/airbus/)** — or go straight to one of the APIs or properties below.
 
-## Tags
+### APIs (7)
 
-- Aerospace
-- Defense
-- Manufacturing
-- Aviation
-- Earth Observation
-- Satellite Imagery
+- [OneAtlas Living Library API](https://apis.io/apis/airbus/oneatlas-living-library/) — Subscription-based catalogue access to Airbus Living Library Pléiades, Pléiades Neo, and SPOT optical imagery for AOI search, preview, and streaming.
+- [OneAtlas Pay-Per-Order Archives API](https://apis.io/apis/airbus/oneatlas-pay-per-order-archives/) — On-demand purchase of historical archive imagery from Airbus optical and radar constellations on a pay-per-order basis.
+- [OneAtlas Pay-Per-Order Tasking API](https://apis.io/apis/airbus/oneatlas-pay-per-order-tasking/) — On-demand satellite tasking for new imagery acquisitions over a user-defined area of interest, with priority and acquisition-window options.
+- [OneAtlas Basemap API](https://apis.io/apis/airbus/oneatlas-basemap/) — Global high-resolution basemap tile service derived from Airbus optical imagery, suitable for embedding in GIS and web mapping applications.
+- [OneAtlas Radar & Elevation API](https://apis.io/apis/airbus/oneatlas-radar-elevation/) — Access to Airbus radar (SAR) imagery and elevation products including WorldDEM, suitable for change detection, surveillance, and terrain analysis.
+- [Airbus Authentication API](https://apis.io/apis/airbus/airbus-authentication-api/) — The Authentication API from Airbus — 1 operation(s) for authentication.
+- [Airbus Catalog API](https://apis.io/apis/airbus/airbus-catalog-api/) — The Catalog API from Airbus — 1 operation(s) for catalog.
 
-## Timestamps
+### Published properties
 
-- **Created:** 2026-05-05
-- **Modified:** 2026-05-16
+Each property below is a page on APIs.io carrying the machine-readable artifact and what it says.
 
-## APIs
+#### Agentic access (1)
 
-### OneAtlas Living Library API
+Which operations an agent can call, which act, and which need a human in the loop.
 
-Subscription-based catalogue access to Airbus Living Library Pléiades, Pléiades Neo, and SPOT optical imagery for AOI search, preview, and streaming.
+- [Airbus Agentic Access](https://apis.io/agentic-access/airbus/airbus-agentic-access/)
 
-- **Human URL:** [https://api.oneatlas.airbus.com/](https://api.oneatlas.airbus.com/)
+#### Collections (3)
 
-#### Tags
+Postman and Open Collection request collections.
 
-- Earth Observation
-- Satellite Imagery
-- Living Library
+- [Airbus OneAtlas API (Authentication)](https://apis.io/collections/airbus/open-airbus/)
+- [Airbus OneAtlas API () Authentication API](https://apis.io/collections/airbus/open-airbus-authentication-api/)
+- [Airbus OneAtlas API () Authentication Catalog API](https://apis.io/collections/airbus/open-airbus-catalog-api/)
 
-#### Properties
+#### Security (3)
 
-- [Portal](https://api.oneatlas.airbus.com/)
-- [Account Management](https://account.foundation.oneatlas.airbus.com/)
-- [Postman Collection](collections/airbus.postman_collection.json) — [Postman Collection 2.1](https://schema.getpostman.com/json/collection/v2.1.0/collection.json)
-- [Open Collection](collections/airbus.opencollection.json) — [Open Collection 1.0](https://schema.opencollection.com/opencollection/v1.0.0.json)
+Authentication, trust centre, and vulnerability disclosure.
 
-### OneAtlas Pay-Per-Order Archives API
+- [Airbus Authentication](https://apis.io/security/airbus/airbus-authentication/)
+- [Airbus Domain Security](https://apis.io/security/airbus/airbus-domain-security/)
+- [Airbus Vulnerability Disclosure](https://apis.io/security/airbus/airbus-vulnerability-disclosure/)
 
-On-demand purchase of historical archive imagery from Airbus optical and radar constellations on a pay-per-order basis.
+#### Plans and pricing (1)
 
-- **Human URL:** [https://api.oneatlas.airbus.com/](https://api.oneatlas.airbus.com/)
+Published plans, tiers and prices.
 
-#### Tags
+- [Airbus Plans Pricing](https://apis.io/plans/airbus/airbus-plans-pricing/)
 
-- Earth Observation
-- Satellite Imagery
-- Archives
+#### Rate limits (1)
 
-#### Properties
+Published request limits.
 
-- [Portal](https://api.oneatlas.airbus.com/)
-- [Postman Collection](collections/airbus.postman_collection.json) — [Postman Collection 2.1](https://schema.getpostman.com/json/collection/v2.1.0/collection.json)
-- [Open Collection](collections/airbus.opencollection.json) — [Open Collection 1.0](https://schema.opencollection.com/opencollection/v1.0.0.json)
+- [Airbus Rate Limits](https://apis.io/rate-limits/airbus/airbus-rate-limits/)
 
-### OneAtlas Pay-Per-Order Tasking API
+#### FinOps (1)
 
-On-demand satellite tasking for new imagery acquisitions over a user-defined area of interest, with priority and acquisition-window options.
+What the API costs to run, by operation.
 
-- **Human URL:** [https://api.oneatlas.airbus.com/](https://api.oneatlas.airbus.com/)
+- [Airbus Finops](https://apis.io/finops/airbus/airbus-finops/)
 
-#### Tags
+## Where to find this API
 
-- Earth Observation
-- Satellite Imagery
-- Tasking
+Links to the company's own pages. This repository publishes no copy of their specifications — the canonical document is theirs and lives at the URLs below.
 
-#### Properties
-
-- [Portal](https://api.oneatlas.airbus.com/)
-- [Postman Collection](collections/airbus.postman_collection.json) — [Postman Collection 2.1](https://schema.getpostman.com/json/collection/v2.1.0/collection.json)
-- [Open Collection](collections/airbus.opencollection.json) — [Open Collection 1.0](https://schema.opencollection.com/opencollection/v1.0.0.json)
-
-### OneAtlas Basemap API
-
-Global high-resolution basemap tile service derived from Airbus optical imagery, suitable for embedding in GIS and web mapping applications.
-
-- **Human URL:** [https://api.oneatlas.airbus.com/](https://api.oneatlas.airbus.com/)
-
-#### Tags
-
-- Mapping
-- Basemap
-- Earth Observation
-
-#### Properties
-
-- [Portal](https://api.oneatlas.airbus.com/)
-- [Postman Collection](collections/airbus.postman_collection.json) — [Postman Collection 2.1](https://schema.getpostman.com/json/collection/v2.1.0/collection.json)
-- [Open Collection](collections/airbus.opencollection.json) — [Open Collection 1.0](https://schema.opencollection.com/opencollection/v1.0.0.json)
-
-### OneAtlas Radar & Elevation API
-
-Access to Airbus radar (SAR) imagery and elevation products including WorldDEM, suitable for change detection, surveillance, and terrain analysis.
-
-- **Human URL:** [https://api.oneatlas.airbus.com/](https://api.oneatlas.airbus.com/)
-
-#### Tags
-
-- Radar
-- SAR
-- Elevation
-- DEM
-
-#### Properties
-
-- [Portal](https://api.oneatlas.airbus.com/)
-- [Postman Collection](collections/airbus.postman_collection.json) — [Postman Collection 2.1](https://schema.getpostman.com/json/collection/v2.1.0/collection.json)
-- [Open Collection](collections/airbus.opencollection.json) — [Open Collection 1.0](https://schema.opencollection.com/opencollection/v1.0.0.json)
-
-## Common Properties
-
-- [GitHub Organization](https://github.com/airbus)
-- [LinkedIn](https://www.linkedin.com/company/airbusgroup)
 - [Website](https://www.airbus.com/)
-- [Portal](https://api.oneatlas.airbus.com/)
-- [Account Management](https://account.foundation.oneatlas.airbus.com/)
-- [Status Page](https://status.oneatlas.airbus.com/)
-- [Features](undefined)
-- [Use Cases](undefined)
-- [Authentication](undefined)
-- [Compliance](undefined)
-- [Integrations](undefined)
+- [GitHub](https://github.com/airbus)
+- [Status](https://status.oneatlas.airbus.com/)
 
-## Maintainers
+## API Evangelist rating
 
-**FN:** Kin Lane
-**Email:** kin@apievangelist.com
+**Kin Score 29.5** — thin · rubric 0.24.0 · scored 2026-10-17
+
+| Facet | Score |
+|---|---|
+| Discoverability | 57.1 |
+| Contract quality | 50.2 |
+| Contract governance | 0.0 |
+| Operational transparency | 26.3 |
+| Developer ergonomics | 21.4 |
+| Access clarity | 15.8 |
+
+**Agent readiness 22.9** — agent-aware
+
+| Agent-readiness dimension | Result |
+|---|---|
+| Spec Presence | yes |
+| Agentic Access | derived (partial credit) |
+| Reversibility Documented | — |
+| MCP Server | — |
+| Auth Clarity | bearer (partial credit) |
+| Idempotency | — |
+| Error Semantics | — |
+| OpenAPI Examples | verified |
+| Rate Limit Signal | derived (partial credit) |
+| Event Surface Described | — |
+| Agent Skills | — |
+| Well Known Catalog | — |
+| Consent Identity | — |
+| Agent Card | — |
+| Dry Run Mode | — |
+| Delegated Identity | — |
+| Protected Resource Metadata | — |
+| Dynamic Client Registration | — |
+| Agentic Commerce | — |
+
+**Regulatory alignment 22.5** — Horizontal (data, software, accessibility, platform)
+
+The rubric is published at [github.com/api-evangelist/kin-score](https://github.com/api-evangelist/kin-score). The per-check breakdown behind these numbers — which checks were earned, partial or missed — along with score history and how this provider compares to its peers, is available at [apis.io/providers/airbus/](https://apis.io/providers/airbus/).
+
+## How this profile is made
+
+API Evangelist profiles a company's public API surface the way a developer would find it: the website, developer portal and documentation, the specifications it publishes, its public repositories, and its pricing, status and changelog pages. From that it derives the properties above — contracts split per API, workflows, schemas, collections, governance rules, plans and rate limits — and scores them against the published [Kin Score rubric](https://github.com/api-evangelist/kin-score).
+
+The artifacts are published on [APIs.io](https://apis.io), not in this repository. This repository is the public record for Airbus: the place to say something is wrong, missing or out of date, and to ask for a re-score or a removal.
+
+## Open an issue
+
+- **Something about this listing** — a wrong description, a missing API, a stale artifact or a question about the rating: [open an issue on this repository](https://github.com/api-evangelist/airbus/issues/new).
+- **A new API, or one that is not in the catalog yet** — [submit it on APIs.io](https://apis.io/add/).
+- **Anything else** — [the APIs.io inbox](https://github.com/api-search/inbox/issues/new) or [info@apievangelist.com](mailto:info@apievangelist.com).
